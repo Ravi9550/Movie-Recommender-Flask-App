@@ -54,7 +54,7 @@ virtual_env_name\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
-4.Ensure you have the necessary data files (movies.pkl and similarity.pkl) in the project directory
+4. Ensure you have the necessary data files (movies.pkl and similarity.pkl) in the project directory
 
 
 ## Project Structure 
@@ -83,7 +83,7 @@ Movie-Recommender-Flask-app/
 To deploy this project run
 
 ```bash
-    python app.py
+python app.py
 ```
 
 Go to address 127.0.0.1:5000 to see the website
