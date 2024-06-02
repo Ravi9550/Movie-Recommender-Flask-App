@@ -9,8 +9,8 @@ The recommender System uses Machine Learning and Natural Language processing to 
 ## Screenshots 
 ![01](https://github.com/Ravi9550/Movie-Recommender-Flask-app/assets/107767414/4079a549-fcc2-44ac-a799-8452e1e7a8f6)
 ![02](https://github.com/Ravi9550/Movie-Recommender-Flask-app/assets/107767414/7a791044-81fb-44b1-8ea2-7b15295fe564)
-![03](https://github.com/Ravi9550/Movie-Recommender-Flask-app/assets/107767414/2656c0fc-880f-4563-9f82-0718eaab6357)
 ![04](https://github.com/Ravi9550/Movie-Recommender-Flask-app/assets/107767414/be1f8566-d170-4cf2-8d0e-ecd5e0fdd9f3)
+![03](https://github.com/Ravi9550/Movie-Recommender-Flask-app/assets/107767414/2656c0fc-880f-4563-9f82-0718eaab6357)
 
 
 
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 ## Project Structure 
 ```bash
 Movie-Recommender-Flask-app/
-|
+│
 ├── templates/
 │   ├── home.html
 │   ├── movie_detail.html
@@ -76,7 +76,6 @@ Movie-Recommender-Flask-app/
 ├── similarity.pkl
 ├── requirements.txt
 └── README.md
-
 ```
 
 ## Deployment
