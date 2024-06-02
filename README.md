@@ -36,12 +36,12 @@ Requests
 git clone https://github.com/Ravi9550/Movie-Recommender-Flask-app.git
 cd Movie-Recommender-Flask-app
 ```
-2. **Create a virtual environment: (Recommended not necessary) **
+2. **Create a virtual environment: (Recommended not necessary)**
 ```bash
 python -m venv virtual_env_name
 virtual_env_name\Scripts\activate
 ```
-3. ** Install the required packages :**
+3. **Install the required packages:**
 ```bash
 pip install -r requirements.txt
 ```
