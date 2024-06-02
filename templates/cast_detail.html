@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+
+{% block title %}{{ cast_member.name }} {% endblock %}
+
+
+{% block content %}
+
+    <div class="cast-detail-container">
+        <div class="image-cast-detail-container">
+       
+        <img src="https://image.tmdb.org/t/p/w500/{{ cast_member['profile_path'] }}" alt="{{ cast_member['name'] }}" onerror="this.onerror=null; this.src='{{ url_for('static', filename='images/dummy.png') }}';">
+
+    </div>
+    <div class="content-cast-detail-container">
+        <h1 class="name">{{ cast_member['name'] }}</h1>
+        
+        <p><strong>Biography:</strong> {{ cast_member['biography'] }}</p>
+        <p><strong>Passion :</strong> {{ cast_member['known_for_department'] }}</p>
+
+        <p><strong>Nickname :</strong> {{ cast_member['also_known_as'] }}</p>
+
+        <p><strong>Birthday:</strong> {{ cast_member['birthday'] }}</p>
+        <p><strong>Place of Birth:</strong> {{ cast_member['place_of_birth'] }}</p>
+        
+    </div>
+
+{% endblock %}

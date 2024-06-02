@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}Home {% endblock %}
+
+{% block content %}
+
+    <h1 class="main-heading">Welcome to Movie Recommender System</h1>
+
+    <form method="post">
+        <label for="movie">Select a movie from the list or type to search:</label>
+        <input list="movies" name="movie" id="movie" class="rounded-search" placeholder="Enter movie name or select from dropdown">
+        <datalist id="movies">
+            {% for movie in movies %}
+                <option value="{{ movie }}">
+            {% endfor %}
+        </datalist>
+        <button type="submit" class="styled-button">Search</button>
+    </form>
+
+    {% if error_message %}
+    <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+        <strong> {{ error_message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endif %}
+
+
+    
+    {% if selected_movie_details %}
+   
+    <div class="movie-details">
+        <img src="https://image.tmdb.org/t/p/w500/{{ selected_movie_details['poster_path'] }}" alt="{{ selected_movie_details['title'] }}">
+        <div>
+        <h2>{{ selected_movie_details['title'] }}</h2>
+
+            <p><strong>Overview:</strong> {{ selected_movie_details['overview'] }}</p>
+            <p><strong>Original Title:</strong> {{ selected_movie_details['original_title'] }}</p>
+            <p><strong>Tagline:</strong> {{ selected_movie_details['tagline'] }}</p>
+            
+            <p><strong>Release Date:</strong> {{ selected_movie_details['release_date'] }}</p>
+            <p><strong>Original Language:</strong> {{ selected_movie_details['original_language'] }}</p>
+
+            
+            <p><strong>Genres:</strong> 
+                {% for genre in selected_movie_details['genres'] %}
+                    {{ genre['name'] }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+            <p><strong>Release Date:</strong> {{ selected_movie_details['release_date'] }}</p>
+            <p><strong>Runtime:</strong> {{ selected_movie_details['runtime'] // 60 }}h {{ selected_movie_details['runtime'] % 60 }}min</p>
+            <p><strong>Vote Average:</strong> {{ selected_movie_details['vote_average'] }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+
+    {% if cast %}
+    <h2 class="cast-details">Cast Details:</h2>
+    <div class="cast-container">
+        <ul class="cast-list">
+            {% for member in cast[:11] %}
+                <li>
+                    <a href="{{ url_for('cast_detail', cast_id=member['id']) }}" title="">
+                        <img src="https://image.tmdb.org/t/p/w500/{{ member['profile_path'] }}" alt="{{ member['name'] }} Profile Image" onerror="this.onerror=null; this.src='{{ url_for('static', filename='images/dummy.png') }}';">
+                    </a>
+                    <strong>{{ member['character'] }}</strong>
+                    {{ member['name'] }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+
+    {% if recommended_movies %}
+        <h2 class = "recommended-movies-for-you">Recommended Movies For You:</h2>
+        <div class="recommendations">
+            {% for movie, poster, movie_id in recommended_movies %}
+                <div class="movie">
+                    <a href="{{ url_for('movie_detail', movie_id=movie_id) }}">
+                        <img src="{{ poster }}" alt="{{ movie }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+    {% endblock %}

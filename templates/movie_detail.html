@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ movie.title }} {% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="image-container">
+            <img src="https://image.tmdb.org/t/p/w500/{{ movie['poster_path'] }}" alt="{{ movie['title'] }}">
+        </div>
+        <div class="content-container">
+            {% set runtime_min = movie['runtime'] %}
+            {% set hours = runtime_min // 60 %}
+            {% set minutes = runtime_min % 60 %}
+            <h2>{{ movie['title'] }}</h2>
+
+            <p><strong>Overview:</strong> {{ movie['overview'] }}</p>
+            <p><strong>Original Title:</strong> {{ movie['original_title'] }}</p>
+            <p><strong>Tagline:</strong> {{ movie['tagline'] }}</p>
+            
+            <p><strong>Release Date:</strong> {{ movie['release_date'] }}</p>
+            <p><strong>Original Language:</strong> {{ movie['original_language'] }}</p>
+
+            
+            <p><strong>Genres:</strong> 
+                {% for genre in movie['genres'] %}
+                    {{ genre['name'] }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+           
+            <p><strong>Runtime:</strong> {{ '%02d hr %02d min' | format(hours, minutes) }}</p>
+
+            <p><strong>Vote Average:</strong> {{ movie['vote_average'] }}</p>
+           
+            <p><strong>Budget:</strong> {{ movie['budget'] }}</p>
+            <p><strong>Movie Link:</strong> <a href="{{ movie['homepage'] }}" target="_blank">{{ movie['homepage'] }}</a></p>
+        </div>
+    </div>
+    
+    <h2 class = "top-cast-member"> Top Cast Members :</h2>
+    <div class="cast-container">
+        
+        <ul class="cast-list">
+            {% for member in cast[:11] %}
+                <li>
+                    <a href="{{ url_for('cast_detail', cast_id=member['id']) }}" title="">
+                        <img src="https://image.tmdb.org/t/p/w500/{{ member['profile_path'] }}" alt="{{ member['name'] }} Profile Image" onerror="this.onerror=null; this.src='{{ url_for('static', filename='images/dummy.png') }}';">
+                    </a>
+                    <strong>{{ member['character'] }}</strong>
+                    {{ member['name'] }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endblock %}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Movie Recommender System{% endblock %}</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand text-primary" href="{{ url_for('home') }}"><strong>Movie Recommender System</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active text-primary display-5" href="{{ url_for('home') }}"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+                
+               
+              </div>
+            </div>
+          </nav>
+    </header>
+   
+
+    
+
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <h5>About Movie Recommender System</h5>
+                    <p>
+                        Our platform leverages advanced machine learning algorithms to provide personalized movie recommendations tailored to your unique tastes and preferences.
+                    </p>
+                    
+                </div>
+                <div class="column-quick-link">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Movies</a></li>
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h5>Contact Us</h5>
+                    <p>Email: support@movierecommender.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                    <div class="social-links">
+                        <a href="#" class="footer-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p>&copy; <span id="current-year"></span> Movie Recommender System. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    
+    
+
+     <!-- Add Bootstrap JS and dependencies -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

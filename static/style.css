@@ -1,0 +1,358 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #840ad13d;
+    
+}
+
+
+h1 {
+    color: #333;
+}
+
+.recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+.recommendations .movie {
+    flex: 0 0 18.5%;
+    margin-bottom: 20px;
+}
+
+.recommendations .movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+
+.movie {
+    margin: 10px;
+    text-align: center;
+}
+
+.movie img {
+   
+    transition: transform 0.3s ease; 
+}
+
+.movie img:hover {
+    transform: scale(1.1); 
+}
+
+
+.rounded-search {
+    border-radius: 20px; 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    width: 800px; 
+    
+}
+
+
+.styled-button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px; 
+    border-radius: 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.styled-button:hover {
+    background-color: #45a049; 
+}
+
+
+.main-heading {
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+    color: #333; 
+    margin-top: 50px; 
+    font-weight: bold; 
+}
+
+
+
+/* movie_detail.html css */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+.image-container {
+    margin-right: 20px;
+    flex: 0 0 auto;
+    margin-top: 30px;
+}
+.image-container img {
+    max-width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left : 0px;
+}
+.content-container {
+    max-width: calc(100% - 320px);
+    flex: 1 1 auto;
+    margin-top: 30px;
+}
+.content-container h2 {
+    margin-top: 50px;
+    margin-left :5px;
+    font-weight: bold;
+}
+.content-container p {
+    margin-top: 5px;
+}
+.content-container a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+.content-container a:hover {
+    text-decoration: underline;
+}
+.cast-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-bottom: 20px; /* Adds space below the cast images */
+
+}
+.cast-container ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.cast-container li {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    text-align: center;
+    width: 100px; 
+    position: relative;
+}
+
+.cast-container img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+.cast-container img:hover {
+    transform: scale(1.1); 
+}
+
+.cast-container strong {
+    display: block;
+    margin-top: 5px; 
+}
+
+
+
+/* cast_detail.html css */
+
+.cast-details
+{
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.top-cast-member 
+{
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.cast-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top : 40px;
+    margin-bottom : 40px;
+
+}
+.image-cast-detail-container {
+    margin-right: 20px;
+    flex: 0 0 auto;
+}
+.image-cast-detail-container img {
+    margin-top: 50px;
+    max-width: 300px;
+    height: 500px;
+    border-radius: 15px;
+}
+.content-cast-detail-container {
+    max-width: calc(100% - 320px);
+    flex: 1 1 auto;
+    margin-top: 50px;
+
+}
+.content-cast-detail-container h1 {
+    margin-top: 0;
+    margin-left : 18px
+}
+
+.content-cast-detail-container a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+.content-cast-detail-container a:hover {
+    text-decoration: underline;
+}
+.image-cast-detail-container .name {
+    margin: 0;
+    padding-left: 10px; 
+    text-align: center;
+}
+
+.content-cast-detail-container p {
+    margin: 18px 18px; 
+}
+
+
+
+
+/* for selected_movie in search bar Css */
+
+.movie-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.movie-details img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    margin-top : 60px;
+
+}
+
+.movie-details div {
+    max-width: 1200px;
+    margin-top : 40px;
+
+}
+
+.movie-details p {
+    margin: 15px 0;
+}
+
+.movie-details strong {
+    font-weight: bold;
+}
+.recommended-movies-for-you 
+{
+      margin-top :40px;
+      font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 180px;
+}
+
+.container {
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    padding: 0 5px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    padding: 20px; /* Added padding for spacing between columns */
+    min-width: 250px;
+}
+
+.column h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffcc00; /* Set your desired color here */
+}
+.column-quick-link h5
+{
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffcc00; /* Set your desired color here */
+    text-align: center;
+}
+
+.column-quick-link
+{
+    flex: 1;
+    padding: 20px; /* Added padding for spacing between columns */
+    min-width: 250px;
+  
+   
+}
+
+.list-unstyled
+{
+   padding-left: 140px;
+  
+   
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin-right: 15px; /* Space between social icons */
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ddd;
+}
+
