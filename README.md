@@ -16,22 +16,25 @@ The recommender System uses Machine Learning and Natural Language processing to 
 
 
 ## Features
-Search for movies from a predefined list.
+1. Search for movies from a predefined list.
 
 
-Get movie recommendations based on similarity.
+2. Get movie recommendations based on similarity.
 
 
-Display detailed movie information in a modal.
+3. Display detailed movie information in a modal.
 
 
-Store the last searched movie for convenience.
+4. Store the last searched movie for convenience.
 
 
 ## Prerequisites
 Python 3.7 or higher
+
 Flask
+
 Pandas
+
 Requests
 
 
