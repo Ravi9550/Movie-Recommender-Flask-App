@@ -17,8 +17,14 @@ The recommender System uses Machine Learning and Natural Language processing to 
 
 ## Features
 Search for movies from a predefined list.
+
+
 Get movie recommendations based on similarity.
+
+
 Display detailed movie information in a modal.
+
+
 Store the last searched movie for convenience.
 
 
