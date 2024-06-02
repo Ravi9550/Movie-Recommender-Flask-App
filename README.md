@@ -57,18 +57,18 @@ pip install -r requirements.txt
 
 
 ## Project Structure 
-
+```bash
 Movie-Recommender-Flask-app/
- 
+|
 ├── templates/
-│   ├── home.html
-│   ├── movie_detail.html
-│   ├── cast_detail.html
-│
+│ ├── home.html
+│ ├── movie_detail.html
+│ ├── cast_detail.html
+|
 ├── static/
-│   ├── style.css
-│   └── images/
-│
+│ ├── style.css
+│ └── images/
+|
 ├── models.py
 ├── database.py
 ├── app.py
@@ -76,6 +76,8 @@ Movie-Recommender-Flask-app/
 ├── similarity.pkl
 ├── requirements.txt
 └── README.md
+
+```
 
 ## Deployment
 
