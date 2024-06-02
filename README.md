@@ -81,19 +81,12 @@ Go to address 127.0.0.1:5000 to see the website
 
 ## Technology Used
 
-**Front-End:**
+**Front-End:** Html , Css , Bootstrap
 
-Html , Css , Bootstrap
+**Backend:** Flask
 
-**Backend:** 
+**Libraries:**  Sci-kit learn , Numpy , Pandas , Nltk
 
-Flask
-
-
-**Libraries:** 
-
-Sci-kit learn , Numpy , Pandas , Nltk
-
-**Contributions**
+**Contributions :**
 Contributions are welcome! Please feel free to submit issues and pull requests to enhance the application.
 
