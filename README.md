@@ -18,7 +18,6 @@ The recommender System uses Machine Learning and Natural Language processing to 
 ## Features
 1. Search for movies from a predefined list.
 
-
 2. Get movie recommendations based on similarity.
 
 
@@ -60,7 +59,7 @@ pip install -r requirements.txt
 ## Project Structure 
 
 Movie-Recommender-Flask-app/
-│
+ 
 ├── templates/
 │   ├── home.html
 │   ├── movie_detail.html
