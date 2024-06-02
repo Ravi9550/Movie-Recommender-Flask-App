@@ -1,4 +1,4 @@
-#                                                                                    Movie Recommender Flask App
+#            Movie Recommender Flask App
 
 A Web based Movie Recommender System consisting of movies 5000 TMDB movies dataset from Kaggle. 
 The recommender System uses Machine Learning and Natural Language processing to suggestions for similar films they might enjoy.
@@ -10,6 +10,8 @@ The recommender System uses Machine Learning and Natural Language processing to 
 ![01](https://github.com/Ravi9550/Movie-Recommender-Flask-app/assets/107767414/4079a549-fcc2-44ac-a799-8452e1e7a8f6)
 ![02](https://github.com/Ravi9550/Movie-Recommender-Flask-app/assets/107767414/7a791044-81fb-44b1-8ea2-7b15295fe564)
 ![04](https://github.com/Ravi9550/Movie-Recommender-Flask-app/assets/107767414/be1f8566-d170-4cf2-8d0e-ecd5e0fdd9f3)
+![05](https://github.com/Ravi9550/Movie-Recommender-Flask-app/assets/107767414/7c615889-c299-4ca3-a8df-f54ddc0dec5f)
+![06](https://github.com/Ravi9550/Movie-Recommender-Flask-app/assets/107767414/5cba0a90-5224-49d6-9b26-e99e7f735c70)
 ![03](https://github.com/Ravi9550/Movie-Recommender-Flask-app/assets/107767414/2656c0fc-880f-4563-9f82-0718eaab6357)
 
 
